@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="assets/ampath1.png" style="width: 1em;" alt="logo"></a>
+      <a class="navbar-brand" href="#">POC Patient Feedback</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" style="margin-left: 10px">
+  <div class="row" style="margin-left: 5px">
+    <form action="">
+      <div class="form-group">
+        <div class="row">
+          <label for="text" style="font-size: 16px">Select Location:</label>
+        </div>
+        <div class="row">
+          <!-- <ng-select [(ngModel)]="selectedLocationId">
+            <ng-option *ngFor="let location of locationArray" [value]="location.id" [disabled]="location.disabled">location.display</ng-option>
+            <ng-option [value]="'custom'">Custom</ng-option>
+          </ng-select> -->
+          <select id="exampleFormControlSelect1" #location>
+            <option selected disabled>Select Location</option>
+            <option *ngFor="let location of locationArray">{{ location.name }}</option>
+          </select>
+          <!-- <ng-select style="width: 350px" [items]="locationArray"
+           bindLabel="name"
+           bindValue="uuid"
+           [(ngModel)]="locationArray"   [ngModelOptions]="{standalone: true}">
+</ng-select> -->
+        </div>
+      </div>
+      <div class="row">
+        <button style="width: 200px" type="button" (click)="onSave()" class="btn btn-md btn-primary btn-block btn-signin">Next</button>
+      </div>
+    </form>
+  </div>
+</div>
